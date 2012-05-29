@@ -1,18 +1,19 @@
 import org.openqa.selenium.remote.*
 
-baseUrl = 'http://localhost:1234/'
+//baseUrl = 'http://localhost:1234/'
+baseUrl = 'http://localhost:4567/'
 
 reportsDir = "target/geb-reports"
 
 driver = {
-	// Ask for a JavaScript-enabled browser
 	def driver
-	if(System.properties.firfox == 'true') {
+	if(System.properties.firefox == 'true') {
 		driver = new org.openqa.selenium.firefox.FirefoxDriver()
 	} else {
+		// Ask for a JavaScript-enabled browser
 		DesiredCapabilities capabilities = new DesiredCapabilities()
 		capabilities.javascriptEnabled = true
-		driver = new RemoteWebDriver(new URL(baseUrl), capabilities)
+		driver = new RemoteWebDriver(new URL("http://localhost:8083"), capabilities)
 		actualCapabilities = ((RemoteWebDriver) driver).getCapabilities();
 		assert actualCapabilities.javascriptEnabled
 	}

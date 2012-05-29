@@ -18,7 +18,7 @@ class SourceSpec extends GebReportingSpec {
 class SimpleSourcePage extends Page {
 	static url = 'simple_source.html'
 	static content = {
-		html { $().html() }
+		html { 'hello' }
 	}
 }
 
