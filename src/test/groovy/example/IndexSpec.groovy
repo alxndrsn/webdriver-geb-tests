@@ -4,7 +4,7 @@ import spock.lang.*
 import geb.*
 import geb.spock.GebReportingSpec
 
-class InboxSpec extends GebReportingSpec {
+class IndexSpec extends GebReportingSpec {
 	def setup() {
 		to IndexPage
 	}
