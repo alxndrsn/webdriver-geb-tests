@@ -11,6 +11,13 @@ This project is a Geb test suite for Ghostdriver/PhantomJS.
 
 ## To start the server
 
+### Ruby (Sinatra)
+
+	ruby server.rb
+
+### Groovy (Jetty)
+This server doesn't behave very well.  Hopefully I will get it sorted at some point - for now I recommend using ruby.
+
 	groovy server.groovy
 
 ## To run the tests
