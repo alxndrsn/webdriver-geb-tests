@@ -11,14 +11,14 @@ class SourceSpec extends GebReportingSpec {
 		
 	def 'page HTML should not be null'() {
 		expect:
-			html == '<html><head><title>Simple</title></head><body><div><p>Some text</p></div></body></html>'
+			html == '<html><head><title>Simple</title></head><body><div><p>Some text</p></div>\n</body></html>'
 	}
 }
 
 class SimpleSourcePage extends Page {
 	static url = 'simple_source.html'
 	static content = {
-		html { 'hello' }
+		html { browser.driver.pageSource }
 	}
 }
 
