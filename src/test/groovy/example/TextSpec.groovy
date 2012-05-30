@@ -14,13 +14,14 @@ class TextSpec extends GebReportingSpec {
 		expect:
 			$(selecter).text() == text
 		where:
-			selecter   | text
-			'#content' | "I'm a p\nAnd I'm a div\nDoes this work?"
-			'p'        | "I'm a p"
-			'div'      | "And I'm a div"
-			'textarea' | "Does this work?"
-			'style'    | "body{background-color:yellow}"
-			'title'    | "Text Fetching"
+			selecter     | text
+			'#content'   | "I'm a p\nAnd I'm a div\nDoes this work?"
+			'p'          | "I'm a p"
+			'div>div'    | "And I'm a div"
+			'textarea'   | "Does this work?"
+			'style'      | "" // N.B. should get VISIBLE text only!
+			'title'      | ""
+			'.not-shown' | ""
 	}
 }
 
