@@ -1,3 +1,4 @@
 temp/
 *.swp
 target
+maven.log
