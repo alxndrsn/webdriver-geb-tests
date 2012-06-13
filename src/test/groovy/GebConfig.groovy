@@ -1,6 +1,5 @@
 import org.openqa.selenium.remote.*
 
-//baseUrl = 'http://localhost:1234/'
 baseUrl = 'http://localhost:4567/'
 
 reportsDir = "target/geb-reports"

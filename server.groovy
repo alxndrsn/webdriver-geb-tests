@@ -4,7 +4,7 @@
 import org.mortbay.jetty.*
 import org.mortbay.jetty.handler.*
 
-def server = new Server(1234)
+def server = new Server(4567)
 def root = new ContextHandler(server, "/")
 root.setResourceBase("./src/test/resources/www_root")
 root.addHandler(new ResourceHandler())

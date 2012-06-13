@@ -26,7 +26,7 @@ class DisplayedSpec extends GebReportingSpec {
 }
 
 class DisplayPage extends Page {
-	static url = 'http://localhost:4567/displayed_and_hidden.html'
+	static url = 'displayed_and_hidden.html'
 	static content = {
 		normalDiv { $('div.normal') }
 		normalSpan { $('span.normal') }
